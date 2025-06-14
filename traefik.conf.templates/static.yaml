@@ -1,0 +1,11 @@
+entryPoints:
+  remote:
+    address: ":18080"
+  local:
+    address: ":28080"
+
+providers:
+  file:
+    directory: /etc/traefik/conf.d
+    watch: true
+
