@@ -17,7 +17,7 @@ func main() {
 
 	// Input from cmdline args
 	svc := flag.String("svc", "", "The service name to process with")
-	endpoints  := flag.String("endpoints", "", "The endpoints to process with, separated by comma")
+	endpoints := flag.String("endpoints", "", "The endpoints to process with, separated by comma")
 	templatePath := flag.String("template", "", "template file path")
 	outputPath := flag.String("output-dir", "", "for rendered file")
 	outputFileName := flag.String("output-file", "", "for rendered file")
@@ -46,7 +46,7 @@ func main() {
 		Svc:       *svc,
 		Endpoints: strings.Split(*endpoints, ","),
 	}
-	output := os.Stdout
+	output := os.Stdout // Dry-run
 	if *outputPath != "" {
 		output, err = os.Create(*outputPath + "/" + *outputFileName)
 		if err != nil {

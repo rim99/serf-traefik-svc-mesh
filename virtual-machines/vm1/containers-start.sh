@@ -1,4 +1,4 @@
-
+#! /bin/bash
 podman network create svc-mesh --subnet=192.168.101.0/24
 
 # Run proxy with static IP: 192.168.101.2
